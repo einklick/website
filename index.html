@@ -699,11 +699,36 @@
             container.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
         }
 
-        // Kontaktformular Absenden simulieren
-        function submitForm(event) {
+        // NEUE AKTUALISIERTE SUBMIT-FUNKTION (Senden über Cloudflare Worker & Resend)
+        async function submitForm(event) {
             event.preventDefault();
-            document.getElementById('contactForm').style.display = 'none';
-            document.getElementById('successMessage').classList.remove('hidden');
+            const form = event.target;
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerText;
+
+            // Button während des Sendens sperren & Feedback geben
+            submitBtn.disabled = true;
+            submitBtn.innerText = 'Wird gesendet...';
+
+            try {
+                const response = await fetch('/api/contact', {
+                    method: 'POST',
+                    body: new FormData(form)
+                });
+
+                if (response.ok) {
+                    form.style.display = 'none';
+                    document.getElementById('successMessage').classList.remove('hidden');
+                } else {
+                    alert('Beim Versenden ist ein Fehler aufgetreten. Bitte versuche es später noch einmal.');
+                    submitBtn.disabled = false;
+                    submitBtn.innerText = originalBtnText;
+                }
+            } catch (error) {
+                alert('Netzwerkfehler. Bitte überprüfe deine Internetverbindung.');
+                submitBtn.disabled = false;
+                submitBtn.innerText = originalBtnText;
+            }
         }
     </script>
 </body>
