@@ -22,7 +22,7 @@ export async function onRequestPost(context) {
       },
       body: JSON.stringify({
         from: 'Einklick Fotografie <onboarding@resend.dev>',
-        to: ['Einklick.Fotografie@gmail.com'],
+        to: ['einklick.fotografie@gmail.com'], // EXACT Kleinbuchstaben wie im Fehler gefordert!
         reply_to: email,
         subject: `Neue Anfrage von ${name}`,
         text: `Neue Nachricht über das Kontaktformular:\n\nName: ${name}\nE-Mail: ${email}\n\nNachricht:\n${nachricht}`,
