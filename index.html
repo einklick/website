@@ -113,7 +113,8 @@
             <!-- Rechts: Icons -->
             <div class="w-12 md:w-1/3 flex justify-end gap-4 md:gap-5 text-gray-600 text-base">
                 <a href="https://www.instagram.com/einklick.fotografie/" target="_blank" rel="noopener noreferrer" class="hover:text-black transition" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                <a href="mailto:Einklick.fotografie@gmail.com" class="hover:text-black transition" title="E-Mail schreiben"><i class="fa-regular fa-envelope"></i></a>
+                <!-- Nachher: -->
+                <a href="#" onclick="openEmail(); return false;" class="hover:text-black transition" title="E-Mail schreiben"><i class="fa-regular fa-envelope"></i></a>
             </div>
         </div>
             
@@ -609,7 +610,7 @@
 
                 <div>
                     <h3 class="font-bold uppercase tracking-wider text-xs mb-2">Kontakt</h3>
-                    <p>E-Mail: Einklick.fotografie@gmail.com</p>
+                    <p>E-Mail: <span id="impressum-email"></span></p>
                 </div>
 
                 <div class="pt-6 border-t border-gray-300">
@@ -667,6 +668,26 @@
 
     <!-- JavaScript -->
     <script>
+        // E-Mail Obfuszierung (Verschleierung)
+        const emailUser = "Einklick.fotografie";
+        const emailDomain = "gmail.com";
+
+        function openEmail() {
+            window.location.href = "mailto:" + emailUser + "@" + emailDomain;
+        }
+
+        // Beim Laden der Seite die E-Mail-Adresse ins Impressum einfügen
+        document.addEventListener("DOMContentLoaded", function() {
+            const emailContainer = document.getElementById("impressum-email");
+            if (emailContainer) {
+                const mailtoAnchor = document.createElement("a");
+                mailtoAnchor.href = "mailto:" + emailUser + "@" + emailDomain;
+                mailtoAnchor.textContent = emailUser + "@" + emailDomain;
+                mailtoAnchor.className = "hover:underline";
+                emailContainer.appendChild(mailtoAnchor);
+            }
+        });
+        
         // Modal öffnen & schließen
         function openModal(id) {
             const modal = document.getElementById(id);
