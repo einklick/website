@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Optimierter Title-Tag (max. 60 Zeichen) -->
+    
+    <!-- SEO Optimierung: Spezifischer Title-Tag mit Fokus auf Haupt-Keywords & Region -->
     <title>Familienfotograf Rottenburg & Ergenzingen | Einklick Fotografie</title>
-
-    <!-- Optimierte Meta-Description (max. 155 Zeichen) -->
-    <meta name="description" content="Natürliche & authentische Familienfotografie, Babybauch- & Newborn-Shooting in Ergenzingen, Rottenburg am Neckar & Umgebung. Jetzt Wunschtermin anfragen!">
+    
+    <!-- SEO Optimierung: Meta Description für eine höhere Klickrate in den Google-Suchergebnissen -->
+    <meta name="description" content="Natürliche & authentische Familienfotografie, Babybauch- & Newborn-Shooting in Ergenzingen, Rottenburg am Neckar, Tübingen & Umgebung. Jetzt Wunschtermin anfragen!">
     
     <!-- SEO Optimierung: Schema.org (JSON-LD) für lokale Unternehmen / Fotografen -->
     <script type="application/ld+json">
@@ -42,7 +43,7 @@
       ]
     }
     </script>
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -108,11 +109,11 @@
         }
 
         .logo-img {
-            max-height: 50px;       /* Auf Mobilgeräten etwas korrigiert */
-            height: auto;           /* Erlaubt dem Logo, die Höhe proportional anzupassen */
+            max-height: 50px;
+            height: auto;
             width: auto;
             max-width: 100%;
-            object-fit: contain;    /* Verhindert jegliche Verzerrung */
+            object-fit: contain;
             margin: 0 auto;
             display: block;
         }
@@ -123,7 +124,6 @@
             }
         }
 
-        /* Versteckt die Scrollbar in den Galerie-Slidern, behält aber die Funktion */
         .hide-scrollbar::-webkit-scrollbar {
             display: none;
         }
@@ -132,7 +132,7 @@
             scrollbar-width: none;
         }
 
-        /* Änderung 20261028: CSS-Styles für das 2-Spalten Galerie-Grid (Square Double-Grid) in allen Galerie-Modals */
+        /* Styles für das 2-Spalten Galerie-Grid (Square Double-Grid) in den Modals */
         .modal-inner-grid {
             max-height: 75vh;
             overflow-y: auto;
@@ -148,7 +148,7 @@
         .gallery-grid-item {
             position: relative;
             width: 100%;
-            padding-top: 100%; /* Erzeugt das quadratische 1:1 Format */
+            padding-top: 100%; /* Erzeugt quadratische Kacheln */
             overflow: hidden;
             border-radius: 4px;
             background-color: #e5e5e5;
@@ -160,7 +160,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Füllt das Quadrat ohne Verzerrung aus */
+            object-fit: cover;
             transition: transform 0.3s ease;
         }
 
@@ -179,26 +179,43 @@
 
     <header class="fixed top-0 left-0 w-full bg-[#f4f2ef]/95 backdrop-blur-sm z-50 py-4 border-b border-gray-200 shadow-sm transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="flex justify-between items-center mb-4">
-                <!-- Links: Platzhalter -->
+            <div class="flex justify-between items-center mb-2 md:mb-4">
                 <div class="w-12 md:w-1/3 flex justify-start"></div>
                 
-                <!-- Mitte: Logo -->
                 <div class="flex-1 text-center flex justify-center px-2">
                     <a href="#home" class="hover:opacity-80 transition inline-block">
-                        <img src="https://images.einklick-fotografie.de/logo.png" alt="Einklick Fotografie Logo" class="logo-img">
+                        <!-- SEO Optimierung: Alt-Attribut des Logos angepasst -->
+                        <img src="https://images.einklick-fotografie.de/logo.png" alt="Einklick Fotografie Logo - Familienfotograf Rottenburg am Neckar" class="logo-img">
                     </a>
                 </div>
             
-            <!-- Rechts: Icons -->
-            <div class="w-12 md:w-1/3 flex justify-end gap-4 md:gap-5 text-gray-600 text-base">
-                <a href="https://www.instagram.com/einklick.fotografie/" target="_blank" rel="noopener noreferrer" class="hover:text-black transition" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                <!-- Nachher: -->
-                <a href="#" onclick="openEmail(); return false;" class="hover:text-black transition" title="E-Mail schreiben"><i class="fa-regular fa-envelope"></i></a>
+                <!-- Rechts: Icons & Mobiler Hamburger-Button -->
+                <div class="w-auto md:w-1/3 flex justify-end items-center gap-3 md:gap-5 text-gray-600 text-base">
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/einklick.fotografie/" target="_blank" rel="noopener noreferrer" class="hover:text-black transition" title="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    
+                    <!-- Google Maps / Business Profile -->
+                    <a href="https://maps.app.goo.gl/xTiE6bvwRCGWGrGa9" target="_blank" rel="noopener noreferrer" class="hover:text-black transition" title="Google Bewertungen & Standort">
+                        <i class="fa-brands fa-google"></i>
+                    </a>
+                    
+                    <!-- E-Mail -->
+                    <a href="#" onclick="openEmail(); return false;" class="hover:text-black transition" title="E-Mail schreiben">
+                        <i class="fa-regular fa-envelope"></i>
+                    </a>
+
+                    <!-- Prominenter Mobiler Hamburger-Button (Nur auf Mobilgeräten sichtbar) -->
+                    <div class="h-5 w-[1px] bg-gray-300 mx-1 md:hidden"></div>
+                    <button onclick="toggleMobileMenu()" class="md:hidden flex items-center justify-center border border-[#c2b2a3] text-gray-800 px-3 py-1.5 rounded-sm hover:bg-[#c2b2a3] hover:text-white transition duration-300 focus:outline-none" aria-label="Menü öffnen">
+                        <i class="fa-solid fa-bars text-lg"></i>
+                    </button>
+                </div>
             </div>
-        </div>
             
-            <nav class="flex justify-center flex-wrap gap-6 md:gap-10 text-[10px] md:text-xs tracking-[0.2em] uppercase font-medium">
+            <!-- Desktop Navigation (Ab 768px Bildschirmsbreite sichtbar) -->
+            <nav class="hidden md:flex justify-center flex-wrap gap-6 md:gap-10 text-[10px] md:text-xs tracking-[0.2em] uppercase font-medium">
                 <a href="#uber-mich" class="nav-link text-gray-800">Über mich</a>
                 <a href="#galerien" class="nav-link text-gray-800">Galerien</a>
                 <a href="#leistungen" class="nav-link text-gray-800">Leistungen</a>
@@ -209,10 +226,26 @@
         </div>
     </header>
 
+    <!-- Mobile Navigation Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-[#f4f2ef] z-[90] hidden flex flex-col justify-center items-center p-6 text-center transition-all duration-300">
+        <button onclick="toggleMobileMenu()" class="absolute top-6 right-6 text-gray-500 hover:text-black text-3xl focus:outline-none">
+            &times;
+        </button>
+        <nav class="flex flex-col gap-8 text-sm tracking-[0.2em] uppercase font-medium text-gray-800">
+            <a href="#uber-mich" onclick="toggleMobileMenu()" class="hover:text-[#c2b2a3] transition">Über mich</a>
+            <a href="#galerien" onclick="toggleMobileMenu()" class="hover:text-[#c2b2a3] transition">Galerien</a>
+            <a href="#leistungen" onclick="toggleMobileMenu()" class="hover:text-[#c2b2a3] transition">Leistungen</a>
+            <a href="#ablauf" onclick="toggleMobileMenu()" class="hover:text-[#c2b2a3] transition">Ablauf</a>
+            <a href="#preise" onclick="toggleMobileMenu()" class="hover:text-[#c2b2a3] transition">Preise</a>
+            <a href="#kontakt" onclick="toggleMobileMenu()" class="hover:text-[#c2b2a3] transition">Kontakt</a>
+        </nav>
+    </div>
+
     <main class="pt-[130px]">
         <section id="home" class="relative w-full h-[50vh] md:h-[70vh]">
+            <!-- SEO Optimierung: Alt-Attribut für das Hauptbild angepasst -->
             <img src="https://images.einklick-fotografie.de/titelbild.jpg" 
-                 alt="Einklick Fotografie Titelbild" 
+                 alt="Familienfotografie & Babybauch Shooting in Ergenzingen und Rottenburg am Neckar" 
                  class="w-full h-full object-cover">
         </section>
 
@@ -221,21 +254,24 @@
             <!-- Sektion 1 -->
             <div class="flex flex-col md:flex-row items-center gap-12 md:gap-20">
                 <div class="w-full md:w-1/2 relative flex justify-center md:justify-end">
+                    <!-- SEO Optimierung: Alt-Attribut mit Keyword ergänzt -->
                     <img src="https://images.einklick-fotografie.de/theresamauthe.jpg" 
-                         alt="Theresa - Einklick Fotografie" 
+                         alt="Theresa Mauthe - Familienfotografin aus Ergenzingen & Rottenburg" 
                          class="image-placeholder shadow-lg max-w-[400px] h-auto object-cover">
                 </div>
                 <div class="w-full md:w-1/2 text-center md:text-left flex flex-col items-center md:items-start">
-                    <h2 class="serif-font text-5xl md:text-6xl text-black mb-3">Hallo, ich bin Theresa.</h2>
+                    <!-- SEO Optimierung: H1 Hauptüberschrift für optimales Ranking auf der Startseite -->
+                    <h1 class="serif-font text-4xl md:text-5xl text-black mb-3">Hallo, ich bin Theresa.</h1>
                     <p class="text-xs tracking-[0.15em] uppercase text-gray-500 mb-6 font-medium">
-                        Zweifachmama & Fotografin aus Ergenzingen
+                        Zweifachmama & Familienfotografin aus Ergenzingen
                     </p>
                     <div class="text-sm text-gray-600 leading-relaxed space-y-4 max-w-md">
                         <p>
                             Schön, dass du da bist! Ich bin das Gesicht hinter <strong>Einklick Fotografie</strong>. Ich bin 35 Jahre alt und gemeinsam mit meiner Familie lebe ich im beschaulichen Ergenzingen bei Rottenburg am Neckar.
                         </p>
+                        <!-- SEO Optimierung: Regionale Suchwörter (Rottenburg, Tübingen, Herrenberg) flüssig eingebunden -->
                         <p>
-                            Als Mama weiß ich aus eigener Erfahrung, wie unendlich schnell die Zeit verfliegt und wie wertvoll es ist, die kleinen und großen Meilensteine des Lebens festzuhalten. Mit viel Geduld, Herzblut und einem geschulten Blick für die leisen Details begleite ich euch im <b>Raum Ergenzingen, Rottenburg und Umgebung</b>.
+                            Als Mama weiß ich aus eigener Erfahrung, wie unendlich schnell die Zeit verfliegt und wie wertvoll es ist, die kleinen und großen Meilensteine des Lebens festzuhalten. Als <b>Familienfotografin für Ergenzingen, Rottenburg am Neckar, Tübingen, Herrenberg und Umgebung</b> begleite ich euch mit viel Geduld, Herzblut und einem geschulten Blick für die leisen Details.
                         </p>
                     </div>
                 </div>
@@ -252,8 +288,9 @@
                         <p>
                             Sandige Füßchen, die neugierig die Welt erkunden. Kleine Händchen auf dem werdenden Babybauch. Und ja – auch der ganz normale, wunderschöne Alltagswahnsinn.
                         </p>
+                        <!-- SEO Optimierung: Gezielte Keyword-Integration (Babybauchfotografie, Newborn Shooting, Homestory) -->
                         <p>
-                            Es sind genau diese flüchtigen Momente, die euch ausmachen und die man allzu schnell vergisst. Ob <b>Familie, Neugeborene, Paare oder Babybauch</b> – mit Einklick Fotografie möchte ich genau das für euch einfangen.
+                            Es sind genau diese flüchtigen Momente, die euch ausmachen und die man allzu schnell vergisst. Ob <b>Familienshooting, Newborn Shooting, Homestory oder Babybauchfotografie in Rottenburg & Umgebung</b> – mit Einklick Fotografie möchte ich genau das für euch einfangen.
                         </p>
                         <p>
                             Deshalb fotografiere ich am liebsten dort, wo ihr euch am wohlsten fühlt. Das kann entspannt bei euch zu Hause zwischen Wohnzimmer, Garten und Hühnern sein, ein gemeinsamer Stadtspaziergang oder ein Ausflug mitten in die Natur.
@@ -267,8 +304,9 @@
                     </div>
                 </div>
                 <div class="w-full md:w-1/2 relative flex justify-center md:justify-start">
+                    <!-- SEO Optimierung: Alt-Attribut mit regionalen Begriffen ergänzt -->
                     <img src="https://images.einklick-fotografie.de/momente.jpg" 
-                         alt="Fotografie in der Natur" 
+                         alt="Natürliche Familienfotografie in der Natur rund um Rottenburg am Neckar" 
                          class="image-placeholder shadow-lg max-w-[400px] h-auto object-cover">
                 </div>
             </div>
@@ -284,9 +322,10 @@
             </div>
 
             <div class="w-full flex flex-col md:flex-row relative z-10">
+                <!-- SEO Optimierung: Alt-Attribute bei Galerie-Vorschauen angepasst -->
                 <div onclick="openModal('galerie-newborn-modal')" class="w-full md:w-1/3 h-[50vh] md:h-[70vh] relative group overflow-hidden cursor-pointer">
                     <img src="https://images.einklick-fotografie.de/newborn.jpg" 
-                         alt="Babybauch & Neugeborene" 
+                         alt="Babybauch & Neugeborene Shooting Ergenzingen" 
                          class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
                     <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 flex items-center justify-center transition duration-300">
                         <span class="text-white tracking-[0.2em] uppercase text-xs md:text-sm border-b border-white pb-1">Babybauch & Neugeborene</span>
@@ -295,7 +334,7 @@
                 
                 <div onclick="openModal('galerie-paare-modal')" class="w-full md:w-1/3 h-[50vh] md:h-[70vh] relative group overflow-hidden cursor-pointer">
                     <img src="https://images.einklick-fotografie.de/paar.jpg" 
-                         alt="Paare" 
+                         alt="Paarshooting Rottenburg am Neckar" 
                          class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
                     <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 flex items-center justify-center transition duration-300">
                         <span class="text-white tracking-[0.2em] uppercase text-xs md:text-sm border-b border-white pb-1">Paare</span>
@@ -304,7 +343,7 @@
                 
                 <div onclick="openModal('galerie-familien-modal')" class="w-full md:w-1/3 h-[50vh] md:h-[70vh] relative group overflow-hidden cursor-pointer">
                     <img src="https://images.einklick-fotografie.de/family.jpg" 
-                         alt="Familien" 
+                         alt="Familienfotograf Rottenburg am Neckar" 
                          class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
                     <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 flex items-center justify-center transition duration-300">
                         <span class="text-white tracking-[0.2em] uppercase text-xs md:text-sm border-b border-white pb-1">Familien</span>
@@ -313,7 +352,7 @@
             </div>
         </section>
 
-        <!-- Taupe Banner mit integriertem "Ablauf" Link -->
+        <!-- Taupe Banner -->
         <div class="w-full bg-[#c2b2a3] py-8 relative z-0">
             <div class="max-w-4xl mx-auto px-4 flex flex-col md:flex-row justify-center items-center gap-4 md:gap-12 text-white text-xs tracking-[0.2em] uppercase">
                 <a href="#leistungen" class="hover:text-black transition">Leistungen</a>
@@ -326,24 +365,22 @@
             </div>
         </div>
 
-        <!-- Leistungen (Vor dem Ablauf) -->
+        <!-- Leistungen -->
         <section id="leistungen" class="py-20 md:py-32 bg-white">
             <div class="max-w-6xl mx-auto px-6">
                 <div class="text-center mb-16">
                     <h2 class="serif-font text-4xl md:text-5xl text-black mb-4">Meine Leistungen</h2>
-                    <p class="text-sm text-gray-600">Was ich für euch einfange</p>
+                    <p class="text-sm text-gray-600">Was ich für euch in Ergenzingen, Rottenburg & Umgebung einfange</p>
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
-                    <!-- Baby -->
                     <div class="border border-gray-200 p-8 hover:shadow-lg transition duration-300 bg-[#f4f2ef]/40">
                         <i class="fa-solid fa-baby text-3xl text-[#c2b2a3] mb-4"></i>
-                        <h3 class="serif-font text-2xl mb-3">Baby</h3>
+                        <h3 class="serif-font text-2xl mb-3">Baby & Newborn</h3>
                         <p class="text-sm text-gray-600 leading-relaxed">
-                            Die zarten ersten Tage und Wochen, liebevoll und sanft in geborgener Umgebung festgehalten.
+                            Die zarten ersten Tage und Wochen, liebevoll und sanft in geborgener Atmosphäre Zuhause festgehalten.
                         </p>
                     </div>
-                    <!-- Babybauch -->
                     <div class="border border-gray-200 p-8 hover:shadow-lg transition duration-300 bg-[#f4f2ef]/40">
                         <i class="fa-regular fa-heart text-3xl text-[#c2b2a3] mb-4"></i>
                         <h3 class="serif-font text-2xl mb-3">Babybauch</h3>
@@ -351,7 +388,6 @@
                             Strahlende Vorfreude und intime Momente auf dem Weg zu eurem kleinen Wunder.
                         </p>
                     </div>
-                    <!-- Paare -->
                     <div class="border border-gray-200 p-8 hover:shadow-lg transition duration-300 bg-[#f4f2ef]/40">
                         <i class="fa-solid fa-user-group text-3xl text-[#c2b2a3] mb-4"></i>
                         <h3 class="serif-font text-2xl mb-3">Paare</h3>
@@ -359,7 +395,6 @@
                             Eure tiefe Verbundenheit und Liebe, ungestellt, pur und mitten aus dem Leben.
                         </p>
                     </div>
-                    <!-- Familie -->
                     <div class="border border-gray-200 p-8 hover:shadow-lg transition duration-300 bg-[#f4f2ef]/40">
                         <i class="fa-solid fa-house-chimney-window text-3xl text-[#c2b2a3] mb-4"></i>
                         <h3 class="serif-font text-2xl mb-3">Familie</h3>
@@ -401,177 +436,173 @@
                 </div>
 
                 <div class="w-full md:w-1/2 relative flex justify-center md:justify-start">
+                    <!-- SEO Optimierung: Alt-Attribut angepasst -->
                     <img src="https://images.einklick-fotografie.de/Ablauf.jpg" 
-                         alt="Entspannte Shootings" 
+                         alt="Entspantes Familienshooting in Ergenzingen" 
                          class="image-placeholder shadow-lg max-w-[400px] h-auto object-cover">
                 </div>
             </div>
         </section>
 
-<!-- Preise & Transparenz -->
-<section id="preise" class="py-20 md:py-32 bg-[#ebe9e6]">
-    <div class="max-w-7xl mx-auto px-6">
-        
-        <!-- Header -->
-        <div class="text-center mb-12">
-            <h2 class="serif-font text-4xl md:text-5xl text-black mb-4">Preise</h2>
-            <p class="text-sm text-gray-600 max-w-xl mx-auto">
-                Echte Erinnerungen ohne versteckte Kosten. Transparente Pakete für eure wertvollsten Momente in Ergenzingen, Rottenburg & Umgebung.
-            </p>
-        </div>
+        <!-- SEO Optimierung: Aktualisierte Preise-Sektion mit 4 getrennten Rubriken, Aktionspreisen & durchgestrichenen Altpreisen -->
+        <section id="preise" class="py-20 md:py-32 bg-[#ebe9e6]">
+            <div class="max-w-7xl mx-auto px-6">
+                
+                <div class="text-center mb-12">
+                    <h2 class="serif-font text-4xl md:text-5xl text-black mb-4">Preise</h2>
+                    <p class="text-sm text-gray-600 max-w-xl mx-auto">
+                        Echte Erinnerungen ohne versteckte Kosten. Transparente Pakete für eure wertvollsten Momente in Ergenzingen, Rottenburg & Umgebung.
+                    </p>
+                </div>
 
-        <!-- Herbst-Special Aktionsbanner -->
-        <div class="bg-white border border-[#c2b2a3] p-6 md:p-8 mb-12 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
-            <div class="text-center md:text-left">
-                <span class="inline-block bg-[#c2b2a3] text-white text-[10px] uppercase tracking-[0.15em] px-3 py-1 mb-2 font-medium">
-                    Herbst-Special
-                </span>
-                <h3 class="serif-font text-2xl md:text-3xl text-black mb-2">Aktions-Preis im Herbst</h3>
-                <p class="text-sm text-gray-600 leading-relaxed max-w-2xl">
-                    Sichert euch aktuell vergünstigte Konditionen für ungestellte Outdoor- und Homestory-Shootings! Perfekt abgestimmt für werdende Eltern, Neugeborene, Familien & Paare.
-                </p>
-            </div>
-            <div class="flex-shrink-0 text-center md:text-right">
-                <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Aktionsangebot</p>
-                <p class="text-2xl font-serif text-[#c2b2a3] font-semibold mb-1">ab 100 € <span class="text-xs text-gray-400 font-sans font-normal line-through ml-1">(statt 130 €)</span></p>
-                <!-- Einheitliche "Euch"-Ansprache -->
-                <p class="text-[10px] text-gray-500 italic mb-3">Sichert euch 30 € Rabatt auf alle Pakete bis zum 30. November 2026</p>
-                <a href="#kontakt" class="inline-block border border-gray-800 text-gray-800 text-[10px] tracking-[0.15em] uppercase py-2.5 px-6 hover:bg-gray-800 hover:text-white transition duration-300">
-                    Aktion anfragen
-                </a>
-            </div>
-        </div>
-
-        <!-- 4-Spalten-Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            
-            <!-- Rubrik 1: Babybauch -->
-            <div class="border border-gray-200 p-6 md:p-8 text-center bg-white shadow-sm hover:shadow-md transition duration-300 flex flex-col justify-between">
-                <div>
-                    <h3 class="serif-font text-2xl md:text-3xl mb-1">Babybauch</h3>
-                    <p class="text-[10px] tracking-[0.15em] uppercase text-gray-500 mb-6 font-medium">Vorfreude & Sinneszauber</p>
-                    
-                    <div class="mb-6">
-                        <p class="text-2xl md:text-3xl font-serif text-[#c2b2a3] font-semibold">
-                            150 € <span class="text-xs text-gray-400 font-sans font-normal line-through ml-1">180 €</span>
+                <!-- Herbst-Special Aktionsbanner -->
+                <div class="bg-white border border-[#c2b2a3] p-6 md:p-8 mb-12 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="text-center md:text-left">
+                        <span class="inline-block bg-[#c2b2a3] text-white text-[10px] uppercase tracking-[0.15em] px-3 py-1 mb-2 font-medium">
+                            Herbst-Special
+                        </span>
+                        <h3 class="serif-font text-2xl md:text-3xl text-black mb-2">Aktions-Preis im Herbst</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed max-w-2xl">
+                            Sichert euch aktuell vergünstigte Konditionen für ungestellte Outdoor- und Homestory-Shootings! Perfekt abgestimmt für werdende Eltern, Neugeborene, Familien & Paare.
                         </p>
                     </div>
-                    
-                    <ul class="text-xs text-gray-600 space-y-3 mb-8 text-left border-t border-b border-gray-100 py-6 leading-relaxed">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#c2b2a3]"></i> ca. 1 Stunde Shootingzeit</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#c2b2a3]"></i> Alleine, als Paar oder mit Geschwistern</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#c2b2a3]"></i> Outdoor in der Natur oder Homestory</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#c2b2a3]"></i> Online-Auswahlgalerie</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#c2b2a3]"></i> 8 bearbeitete Bilder inklusive</li>
-                    </ul>
-                </div>
-                <div>
-                    <a href="#kontakt" class="inline-block w-full border border-gray-800 text-gray-800 text-[10px] md:text-xs tracking-[0.15em] uppercase py-3 hover:bg-gray-800 hover:text-white transition duration-300">
-                        Termin anfragen
-                    </a>
-                </div>
-            </div>
-
-            <!-- Rubrik 2: Neugeborene -->
-            <div class="border border-gray-200 p-6 md:p-8 text-center bg-white shadow-sm hover:shadow-md transition duration-300 flex flex-col justify-between">
-                <div>
-                    <h3 class="serif-font text-2xl md:text-3xl mb-1">Neugeborene</h3>
-                    <!-- Korrigiertes Trennzeichen -->
-                    <p class="text-[10px] tracking-[0.15em] uppercase text-gray-500 mb-6 font-medium">Sanfte Wochenbett-Momente</p>
-                    
-                    <div class="mb-6">
-                        <p class="text-2xl md:text-3xl font-serif text-[#c2b2a3] font-semibold">
-                            200 € <span class="text-xs text-gray-400 font-sans font-normal line-through ml-1">230 €</span>
-                        </p>
+                    <div class="flex-shrink-0 text-center md:text-right">
+                        <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Aktionsangebot</p>
+                        <p class="text-2xl font-serif text-[#c2b2a3] font-semibold mb-1">ab 100 € <span class="text-xs text-gray-400 font-sans font-normal line-through ml-1">(statt 130 €)</span></p>
+                        <p class="text-[10px] text-gray-500 italic mb-3">Sichert euch 30 € Rabatt auf alle Pakete bis zum 30. November 2026</p>
+                        <a href="#kontakt" class="inline-block border border-gray-800 text-gray-800 text-[10px] tracking-[0.15em] uppercase py-2.5 px-6 hover:bg-gray-800 hover:text-white transition duration-300">
+                            Aktion anfragen
+                        </a>
                     </div>
-                    
-                    <ul class="text-xs text-gray-600 space-y-3 mb-8 text-left border-t border-b border-gray-100 py-6 leading-relaxed">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#c2b2a3]"></i> ca. 1,5 bis 2 Stunden ohne Zeitdruck</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#c2b2a3]"></i> Viel Raum für Still-, Wickel- & Kuschelpausen</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#c2b2a3]"></i> Gemütlich Zuhause oder Outdoor</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#c2b2a3]"></i> Online-Auswahlgalerie</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#c2b2a3]"></i> 8 bearbeitete Bilder inklusive</li>
-                    </ul>
                 </div>
-                <div>
-                    <a href="#kontakt" class="inline-block w-full border border-gray-800 text-gray-800 text-[10px] md:text-xs tracking-[0.15em] uppercase py-3 hover:bg-gray-800 hover:text-white transition duration-300">
-                        Termin anfragen
-                    </a>
-                </div>
-            </div>
 
-            <!-- Rubrik 3: Familien -->
-            <div class="border border-gray-200 p-6 md:p-8 text-center bg-white shadow-sm hover:shadow-md transition duration-300 flex flex-col justify-between">
-                <div>
-                    <h3 class="serif-font text-2xl md:text-3xl mb-1">Familien</h3>
-                    <!-- Korrigierte Grammatik -->
-                    <p class="text-[10px] tracking-[0.15em] uppercase text-gray-500 mb-6 font-medium">Lebendige & Echte Momente</p>
+                <!-- 4-Spalten-Grid für alle Kategorien -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     
-                    <div class="mb-6">
-                        <p class="text-2xl md:text-3xl font-serif text-[#c2b2a3] font-semibold">
-                            150 € <span class="text-xs text-gray-400 font-sans font-normal line-through ml-1">180 €</span>
-                        </p>
+                    <!-- Rubrik 1: Babybauch -->
+                    <div class="border border-gray-200 p-6 md:p-8 text-center bg-white shadow-sm hover:shadow-md transition duration-300 flex flex-col justify-between">
+                        <div>
+                            <h3 class="serif-font text-2xl md:text-3xl mb-1">Babybauch</h3>
+                            <p class="text-[10px] tracking-[0.15em] uppercase text-gray-500 mb-6 font-medium">Vorfreude & Sinneszauber</p>
+                            
+                            <div class="mb-6">
+                                <p class="text-2xl md:text-3xl font-serif text-[#c2b2a3] font-semibold">
+                                    150 € <span class="text-xs text-gray-400 font-sans font-normal line-through ml-1">180 €</span>
+                                </p>
+                            </div>
+                            
+                            <ul class="text-xs text-gray-600 space-y-3 mb-8 text-left border-t border-b border-gray-100 py-6 leading-relaxed">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#c2b2a3]"></i> ca. 1 Stunde Shootingzeit</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#c2b2a3]"></i> Alleine, als Paar oder mit Geschwistern</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#c2b2a3]"></i> Outdoor in der Natur oder Homestory</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#c2b2a3]"></i> Online-Auswahlgalerie</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#c2b2a3]"></i> 8 bearbeitete Bilder inklusive</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <a href="#kontakt" class="inline-block w-full border border-gray-800 text-gray-800 text-[10px] md:text-xs tracking-[0.15em] uppercase py-3 hover:bg-gray-800 hover:text-white transition duration-300">
+                                Termin anfragen
+                            </a>
+                        </div>
                     </div>
-                    
-                    <ul class="text-xs text-gray-600 space-y-3 mb-8 text-left border-t border-b border-gray-100 py-6 leading-relaxed">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#c2b2a3]"></i> ca. 1 Stunde Shootingzeit</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#c2b2a3]"></i> Spiel & Spaß ohne steifes Posing</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#c2b2a3]"></i> Lieblingsort oder Naturspaziergang</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#c2b2a3]"></i> Online-Auswahlgalerie</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#c2b2a3]"></i> 8 bearbeitete Bilder inklusive</li>
-                    </ul>
-                </div>
-                <div>
-                    <a href="#kontakt" class="inline-block w-full border border-gray-800 text-gray-800 text-[10px] md:text-xs tracking-[0.15em] uppercase py-3 hover:bg-gray-800 hover:text-white transition duration-300">
-                        Termin anfragen
-                    </a>
-                </div>
-            </div>
 
-            <!-- Rubrik 4: Paare -->
-            <div class="border border-gray-200 p-6 md:p-8 text-center bg-white shadow-sm hover:shadow-md transition duration-300 flex flex-col justify-between">
-                <div>
-                    <h3 class="serif-font text-2xl md:text-3xl mb-1">Paare</h3>
-                    <p class="text-[10px] tracking-[0.15em] uppercase text-gray-500 mb-6 font-medium">Echt & Ungestellt</p>
-                    
-                    <div class="mb-6">
-                        <p class="text-2xl md:text-3xl font-serif text-[#c2b2a3] font-semibold">
-                            100 € <span class="text-xs text-gray-400 font-sans font-normal line-through ml-1">130 €</span>
-                        </p>
+                    <!-- Rubrik 2: Neugeborene -->
+                    <div class="border border-gray-200 p-6 md:p-8 text-center bg-white shadow-sm hover:shadow-md transition duration-300 flex flex-col justify-between">
+                        <div>
+                            <h3 class="serif-font text-2xl md:text-3xl mb-1">Neugeborene</h3>
+                            <p class="text-[10px] tracking-[0.15em] uppercase text-gray-500 mb-6 font-medium">Sanfte Wochenbett-Momente</p>
+                            
+                            <div class="mb-6">
+                                <p class="text-2xl md:text-3xl font-serif text-[#c2b2a3] font-semibold">
+                                    200 € <span class="text-xs text-gray-400 font-sans font-normal line-through ml-1">230 €</span>
+                                </p>
+                            </div>
+                            
+                            <ul class="text-xs text-gray-600 space-y-3 mb-8 text-left border-t border-b border-gray-100 py-6 leading-relaxed">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#c2b2a3]"></i> ca. 1,5 bis 2 Stunden ohne Zeitdruck</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#c2b2a3]"></i> Viel Raum für Still-, Wickel- & Kuschelpausen</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#c2b2a3]"></i> Gemütlich Zuhause oder Outdoor</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#c2b2a3]"></i> Online-Auswahlgalerie</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#c2b2a3]"></i> 8 bearbeitete Bilder inklusive</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <a href="#kontakt" class="inline-block w-full border border-gray-800 text-gray-800 text-[10px] md:text-xs tracking-[0.15em] uppercase py-3 hover:bg-gray-800 hover:text-white transition duration-300">
+                                Termin anfragen
+                            </a>
+                        </div>
                     </div>
-                    
-                    <ul class="text-xs text-gray-600 space-y-3 mb-8 text-left border-t border-b border-gray-100 py-6 leading-relaxed">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#c2b2a3]"></i> ca. 1 Stunde Shootingzeit</li>
-                        <!-- Korrigierte Großschreibung -->
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#c2b2a3]"></i> Entspannte Atmosphäre zu Zweit</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#c2b2a3]"></i> Outdoor in der Natur oder als Homestory</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#c2b2a3]"></i> Online-Auswahlgalerie</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#c2b2a3]"></i> 8 bearbeitete Bilder inklusive</li>
-                    </ul>
+
+                    <!-- Rubrik 3: Familien -->
+                    <div class="border border-gray-200 p-6 md:p-8 text-center bg-white shadow-sm hover:shadow-md transition duration-300 flex flex-col justify-between">
+                        <div>
+                            <h3 class="serif-font text-2xl md:text-3xl mb-1">Familien</h3>
+                            <p class="text-[10px] tracking-[0.15em] uppercase text-gray-500 mb-6 font-medium">Lebendige & Echte Momente</p>
+                            
+                            <div class="mb-6">
+                                <p class="text-2xl md:text-3xl font-serif text-[#c2b2a3] font-semibold">
+                                    150 € <span class="text-xs text-gray-400 font-sans font-normal line-through ml-1">180 €</span>
+                                </p>
+                            </div>
+                            
+                            <ul class="text-xs text-gray-600 space-y-3 mb-8 text-left border-t border-b border-gray-100 py-6 leading-relaxed">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#c2b2a3]"></i> ca. 1 Stunde Shootingzeit</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#c2b2a3]"></i> Spiel & Spaß ohne steifes Posing</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#c2b2a3]"></i> Lieblingsort oder Naturspaziergang</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#c2b2a3]"></i> Online-Auswahlgalerie</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#c2b2a3]"></i> 8 bearbeitete Bilder inklusive</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <a href="#kontakt" class="inline-block w-full border border-gray-800 text-gray-800 text-[10px] md:text-xs tracking-[0.15em] uppercase py-3 hover:bg-gray-800 hover:text-white transition duration-300">
+                                Termin anfragen
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Rubrik 4: Paare -->
+                    <div class="border border-gray-200 p-6 md:p-8 text-center bg-white shadow-sm hover:shadow-md transition duration-300 flex flex-col justify-between">
+                        <div>
+                            <h3 class="serif-font text-2xl md:text-3xl mb-1">Paare</h3>
+                            <p class="text-[10px] tracking-[0.15em] uppercase text-gray-500 mb-6 font-medium">Echt & Ungestellt</p>
+                            
+                            <div class="mb-6">
+                                <p class="text-2xl md:text-3xl font-serif text-[#c2b2a3] font-semibold">
+                                    100 € <span class="text-xs text-gray-400 font-sans font-normal line-through ml-1">130 €</span>
+                                </p>
+                            </div>
+                            
+                            <ul class="text-xs text-gray-600 space-y-3 mb-8 text-left border-t border-b border-gray-100 py-6 leading-relaxed">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#c2b2a3]"></i> ca. 1 Stunde Shootingzeit</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#c2b2a3]"></i> Entspannte Atmosphäre zu Zweit</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#c2b2a3]"></i> Outdoor in der Natur oder als Homestory</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#c2b2a3]"></i> Online-Auswahlgalerie</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#c2b2a3]"></i> 8 bearbeitete Bilder inklusive</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <a href="#kontakt" class="inline-block w-full border border-gray-800 text-gray-800 text-[10px] md:text-xs tracking-[0.15em] uppercase py-3 hover:bg-gray-800 hover:text-white transition duration-300">
+                                Termin anfragen
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
-                <div>
-                    <a href="#kontakt" class="inline-block w-full border border-gray-800 text-gray-800 text-[10px] md:text-xs tracking-[0.15em] uppercase py-3 hover:bg-gray-800 hover:text-white transition duration-300">
-                        Termin anfragen
-                    </a>
+
+                <div class="text-center mt-12 text-xs text-gray-500">
+                    <p>* Alle Preise verstehen sich inkl. MwSt. Im Grundpaket sind 8 liebevoll bearbeitete Bilder enthalten. Weitere digitale Lieblingsbilder aus eurer persönlichen Online-Galerie könnt ihr flexibel für 15 € pro Bild (oder in günstigen Paketpreisen) nachbestellen.</p>
                 </div>
+
             </div>
-
-        </div>
-
-        <!-- Fußnote -->
-        <div class="text-center mt-12 text-xs text-gray-500">
-            <p>* Alle Preise verstehen sich inkl. MwSt. Im Grundpaket sind 8 liebevoll bearbeitete Bilder enthalten. Weitere digitale Lieblingsbilder aus eurer persönlichen Online-Galerie könnt ihr flexibel für 15 € pro Bild (oder in günstigen Paketpreisen) nachbestellen.</p>
-        </div>
-
-    </div>
-</section>
+        </section>
 
         <!-- Kundenbewertungen -->
         <section class="py-20 md:py-28 bg-[#f4f2ef] border-t border-gray-200">
             <div class="max-w-5xl mx-auto px-6">
                 <div class="text-center mb-16">
                     <h2 class="serif-font text-4xl md:text-5xl text-black mb-4">Das sagen Kunden</h2>
-                    <p class="text-sm text-gray-600">Echte Worte von wundervollen Familien</p>
+                    <!-- SEO Optimierung: Erwähnung der Kernregionen -->
+                    <p class="text-sm text-gray-600">Echte Worte von wundervollen Familien aus der Region Rottenburg & Tübingen</p>
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -643,23 +674,41 @@
             </div>
         </section>
 
+        <!-- Instagram Call-To-Action Abschnitt -->
+        <section class="py-16 md:py-20 bg-[#f4f2ef] border-t border-gray-200">
+            <div class="max-w-3xl mx-auto px-6 text-center">
+                <a href="https://www.instagram.com/einklick.fotografie/" target="_blank" rel="noopener noreferrer" class="inline-block text-[#c2b2a3] text-3xl mb-3 hover:scale-110 transition duration-300">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <h3 class="serif-font text-2xl md:text-3xl text-black mb-3">Begleite mich auf Instagram</h3>
+                <p class="text-sm text-gray-600 max-w-lg mx-auto leading-relaxed mb-6">
+                    Folgt mir gerne unter <span class="font-medium text-gray-800">@einklick.fotografie</span> für noch mehr Einblicke in aktuelle Shootings, Geschichten hinter den Kulissen und frische Inspirationen.
+                </p>
+                <a href="https://www.instagram.com/einklick.fotografie/" target="_blank" rel="noopener noreferrer" class="inline-block border border-gray-800 text-gray-800 text-[10px] md:text-xs tracking-[0.15em] uppercase py-2.5 px-6 hover:bg-gray-800 hover:text-white transition duration-300">
+                    Auf Instagram folgen
+                </a>
+            </div>
+        </section>
+
         <!-- Footer -->
         <footer class="w-full py-10 bg-[#ebe9e6] border-t border-gray-300">
             <div class="max-w-4xl mx-auto text-center px-4 flex flex-col items-center gap-4">
-                <img src="https://images.einklick-fotografie.de/logo.png" alt="Einklick Fotografie Logo" class="h-16 w-auto mb-2 opacity-80">
+                <!-- SEO Optimierung: Alt-Attribut im Footer ergänzt -->
+                <img src="https://images.einklick-fotografie.de/logo.png" alt="Einklick Fotografie - Familienfotografie Ergenzingen Rottenburg" class="h-16 w-auto mb-2 opacity-80">
                 <div class="flex gap-4 text-xs text-gray-500 tracking-wider uppercase mt-2">
                     <a href="#" onclick="openModal('impressum-modal'); return false;" class="hover:text-gray-800 transition">Impressum & Datenschutz</a>
                     <span>|</span>
                     <a href="#" onclick="openModal('agb-modal'); return false;" class="hover:text-gray-800 transition">AGB</a>
                 </div>
-                <p class="text-[10px] text-gray-400 tracking-wider mt-4">© 2026 Einklick Fotografie. Alle Rechte vorbehalten.</p>
+                <!-- SEO Optimierung: Lokale Fußnote für geografische Signale -->
+                <p class="text-[10px] text-gray-400 tracking-wider mt-2">Einklick Fotografie • Familien-, Babybauch- & Newborn-Fotografin in Ergenzingen, Rottenburg am Neckar, Tübingen & Herrenberg</p>
+                <p class="text-[10px] text-gray-400 tracking-wider">© 2026 Einklick Fotografie. Alle Rechte vorbehalten.</p>
             </div>
         </footer>
 
     </main>
 
     <!-- Modal 1: Galerie Neugeborene -->
-    <!-- Änderung 20261028: Umstellung von horizontalem Slider auf 2-Spalten-Grid (Square Double-Grid) -->
     <div id="galerie-newborn-modal" class="fixed inset-0 bg-black/70 z-[100] hidden flex justify-center items-center backdrop-blur-sm p-4 transition-opacity">
         <div class="bg-[#f4f2ef] w-full max-w-4xl p-6 md:p-10 relative shadow-2xl rounded-sm">
             <button onclick="closeModal('galerie-newborn-modal')" class="absolute top-4 right-6 text-gray-400 hover:text-black text-4xl transition z-20">&times;</button>
@@ -667,40 +716,39 @@
             <h2 class="serif-font text-3xl md:text-4xl text-center mb-2">Babybauch & Neugeborene</h2>
             <p class="text-xs tracking-[0.15em] uppercase text-gray-500 text-center mb-8">Liebevolle & Sanfte Momente</p>
             
-            <!-- Änderung 20261028: Scrollbarer Grid-Container für vertikales Durchscrollen -->
             <div class="modal-inner-grid">
                 <div class="gallery-grid-2col">
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/newborn.jpg" alt="Neugeborenes Baby" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/newborn/1.jpg" alt="Babybauch Momente" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/newborn/2.jpg" alt="Baby Detailaufnahme" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/newborn/2_1.jpg" alt="Neugeborenes Shooting" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/newborn/3.jpg" alt="Baby Händchen" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/newborn/4.jpg" alt="Homestory Baby" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/newborn/5.jpg" alt="Mama mit Baby" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/newborn/6.jpg" alt="Baby Füße" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/newborn/7.jpg" alt="Babybauch im Licht" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/newborn/8.jpg" alt="Geborgenheit" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/newborn/9.jpg" alt="Babykuscheln" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/newborn/10.jpg" alt="Familie & Baby" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/newborn/11.jpg" alt="Sanfte Details" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/newborn/12.jpg" alt="Baby schläft" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/newborn/13.jpg" alt="Schwangerschaftsfotografie" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/newborn/14.jpg" alt="Liebevolle Aufnahmen" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/newborn/15.jpg" alt="Babybauch Outdoor" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/newborn/16.jpg" alt="Baby Glück" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/newborn/17.jpg" alt="Candid Newborn" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/newborn/18.jpg" alt="Eltern & Kind" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/newborn/19.jpg" alt="Wochenbett Erinnerungen" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/newborn/20.jpg" alt="Baby Porträt" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/newborn/21.jpg" alt="Kleine Wunder" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/newborn/22.jpg" alt="Fotografie Rottenburg" loading="lazy"></div>
+                    <!-- SEO Optimierung: Spezifische Alt-Attribute für alle Galeriebilder -->
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/newborn.jpg" alt="Neugeborenenfotograf Rottenburg am Neckar" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/newborn/1.jpg" alt="Babybauch Shooting Ergenzingen" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/newborn/2.jpg" alt="Baby Detailaufnahme Füße" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/newborn/2_1.jpg" alt="Newborn Shooting Zuhause Tübingen" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/newborn/3.jpg" alt="Baby Händchen Nahaufnahme" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/newborn/4.jpg" alt="Homestory Babyfotografie Rottenburg" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/newborn/5.jpg" alt="Mama mit Baby auf dem Arm" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/newborn/6.jpg" alt="Baby Füße Wochenbett" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/newborn/7.jpg" alt="Babybauch im Licht Schatten Spiel" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/newborn/8.jpg" alt="Geborgenheit Wochenbett Shooting" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/newborn/9.jpg" alt="Babykuscheln Homestory" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/newborn/10.jpg" alt="Familie & Baby Fotograf Ergenzingen" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/newborn/11.jpg" alt="Sanfte Details Newborn" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/newborn/12.jpg" alt="Baby schläft friedlich" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/newborn/13.jpg" alt="Schwangerschaftsfotografie Rottenburg" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/newborn/14.jpg" alt="Liebevolle Aufnahmen Babybauch" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/newborn/15.jpg" alt="Babybauch Outdoor Shooting Tübingen" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/newborn/16.jpg" alt="Baby Glück Momente" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/newborn/17.jpg" alt="Candid Newborn Photography" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/newborn/18.jpg" alt="Eltern & Kind Fotografie Ergenzingen" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/newborn/19.jpg" alt="Wochenbett Erinnerungen Fotografin" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/newborn/20.jpg" alt="Baby Porträt ungestellt" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/newborn/21.jpg" alt="Kleine Wunder Fotografie" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/newborn/22.jpg" alt="Babyfotograf Rottenburg am Neckar" loading="lazy"></div>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Modal 2: Galerie Paare -->
-    <!-- Änderung 20261028: Umstellung von horizontalem Slider auf 2-Spalten-Grid (Square Double-Grid) -->
     <div id="galerie-paare-modal" class="fixed inset-0 bg-black/70 z-[100] hidden flex justify-center items-center backdrop-blur-sm p-4 transition-opacity">
         <div class="bg-[#f4f2ef] w-full max-w-4xl p-6 md:p-10 relative shadow-2xl rounded-sm">
             <button onclick="closeModal('galerie-paare-modal')" class="absolute top-4 right-6 text-gray-400 hover:text-black text-4xl transition z-20">&times;</button>
@@ -708,31 +756,30 @@
             <h2 class="serif-font text-3xl md:text-4xl text-center mb-2">Paare</h2>
             <p class="text-xs tracking-[0.15em] uppercase text-gray-500 text-center mb-8">Echte Emotionen & Verbundenheit</p>
             
-            <!-- Änderung 20261028: Scrollbarer Grid-Container für vertikales Durchscrollen -->
             <div class="modal-inner-grid">
                 <div class="gallery-grid-2col">
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/paar.jpg" alt="Paar Fotografie" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/paar/1.jpg" alt="Paar im Feld" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/paar/2.jpg" alt="Liebe & Verbundenheit" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/paar/3.jpg" alt="Paar Lachen" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/paar/3_1.jpg" alt="Romantische Momente" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/paar/4.jpg" alt="Paar Shooting" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/paar/4_1.jpg" alt="Echte Blicke" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/paar/5.jpg" alt="Pärchenbilder Outdoor" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/paar/6.jpg" alt="Zweisamkeit" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/paar/7.jpg" alt="Paar Umarmung" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/paar/8.jpg" alt="Natürliche Paarfotos" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/paar/9.jpg" alt="Spaziergang zu zweit" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/paar/10.jpg" alt="Paar Portrait" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/paar/11.jpg" alt="Echte Emotionen" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/paar/12.jpg" alt="Paarfotograf Rottenburg" loading="lazy"></div>
+                    <!-- SEO Optimierung: Alt-Attribute für Paargalerie -->
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/paar.jpg" alt="Paar Fotografie Rottenburg am Neckar" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/paar/1.jpg" alt="Paarshooting im Feld Ergenzingen" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/paar/2.jpg" alt="Liebe & Verbundenheit Paarbilder" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/paar/3.jpg" alt="Paar Lachen ungestellt" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/paar/3_1.jpg" alt="Romantische Momente zu zweit" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/paar/4.jpg" alt="Paar Shooting Outdoor Tübingen" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/paar/4_1.jpg" alt="Echte Blicke Paaraufnahmen" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/paar/5.jpg" alt="Pärchenbilder Outdoor Natur" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/paar/6.jpg" alt="Zweisamkeit Shooting Herrenberg" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/paar/7.jpg" alt="Paar Umarmung natürlich" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/paar/8.jpg" alt="Natürliche Paarfotos Fotografin" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/paar/9.jpg" alt="Spaziergang zu zweit Outdoor" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/paar/10.jpg" alt="Paar Portrait Lichtspiel" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/paar/11.jpg" alt="Echte Emotionen Fotografie" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/paar/12.jpg" alt="Paarfotograf Rottenburg am Neckar" loading="lazy"></div>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Modal 3: Galerie Familien -->
-    <!-- Änderung 20261028: Umstellung von horizontalem Slider auf 2-Spalten-Grid (Square Double-Grid) -->
     <div id="galerie-familien-modal" class="fixed inset-0 bg-black/70 z-[100] hidden flex justify-center items-center backdrop-blur-sm p-4 transition-opacity">
         <div class="bg-[#f4f2ef] w-full max-w-4xl p-6 md:p-10 relative shadow-2xl rounded-sm">
             <button onclick="closeModal('galerie-familien-modal')" class="absolute top-4 right-6 text-gray-400 hover:text-black text-4xl transition z-20">&times;</button>
@@ -740,24 +787,24 @@
             <h2 class="serif-font text-3xl md:text-4xl text-center mb-2">Familien</h2>
             <p class="text-xs tracking-[0.15em] uppercase text-gray-500 text-center mb-8">Lebendige & Ungestellte Erinnerungen</p>
             
-            <!-- Änderung 20261028: Scrollbarer Grid-Container für vertikales Durchscrollen -->
             <div class="modal-inner-grid">
                 <div class="gallery-grid-2col">
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/family.jpg" alt="Familienfotografie" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/family/1.jpg" alt="Familie im Wald" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/family/2.jpg" alt="Kinder Lachen" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/family/3.jpg" alt="Familienshooting Outdoor" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/family/4.jpg" alt="Geschwister Momente" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/family/5.jpg" alt="Familienglück" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/family/6.jpg" alt="Spass auf der Wiese" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/family/7.jpg" alt="Papa mit Kind" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/family/8.jpg" alt="Mama und Kinder" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/family/9.jpg" alt="Echte Familienmomente" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/family/10.jpg" alt="Kinder Toben" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/family/11.jpg" alt="Familie Kuscheln" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/family/12.jpg" alt="Candid Family Photography" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/family/13.jpg" alt="Familie mit Hund" loading="lazy"></div>
-                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/family/14.jpg" alt="Familienshooting Tübingem" loading="lazy"></div>
+                    <!-- SEO Optimierung: Alt-Attribute für Familiengalerie -->
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/family.jpg" alt="Familienfotograf Rottenburg am Neckar" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/family/1.jpg" alt="Familie im Wald Ergenzingen" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/family/2.jpg" alt="Kinder Lachen Familienshooting" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/family/3.jpg" alt="Familienshooting Outdoor Tübingen" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/family/4.jpg" alt="Geschwister Momente ungestellt" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/family/5.jpg" alt="Familienglück Naturaufnahmen" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/family/6.jpg" alt="Spass auf der Wiese Familienfotos" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/family/7.jpg" alt="Papa mit Kind Huckepack" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/family/8.jpg" alt="Mama und Kinder Kuscheln" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/family/9.jpg" alt="Echte Familienmomente Fotografin" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/family/10.jpg" alt="Kinder Toben in der Natur" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/family/11.jpg" alt="Familie Kuscheln Outdoor" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/family/12.jpg" alt="Candid Family Photography Rottenburg" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/family/13.jpg" alt="Familie mit Hund Shooting" loading="lazy"></div>
+                    <div class="gallery-grid-item"><img src="https://images.einklick-fotografie.de/family/14.jpg" alt="Familienshooting Tübingen Ergenzingen" loading="lazy"></div>
                 </div>
             </div>
         </div>
@@ -776,6 +823,7 @@
                     <p>
                         Theresa Mauthe<br>
                         Einklick Fotografie<br>
+                        Eutinger Str. 54<br>
                         72108 Rottenburg am Neckar
                     </p>
                 </div>
@@ -840,7 +888,6 @@
 
     <!-- JavaScript -->
     <script>
-        // E-Mail Obfuszierung (Verschleierung)
         const emailUser = "Einklick.fotografie";
         const emailDomain = "gmail.com";
 
@@ -848,7 +895,18 @@
             window.location.href = "mailto:" + emailUser + "@" + emailDomain;
         }
 
-        // Beim Laden der Seite die E-Mail-Adresse ins Impressum einfügen
+        /* Funktion zum Öffnen/Schließen des mobilen Hamburger-Menüs */
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            } else {
+                menu.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
         document.addEventListener("DOMContentLoaded", function() {
             const emailContainer = document.getElementById("impressum-email");
             if (emailContainer) {
@@ -860,7 +918,6 @@
             }
         });
         
-        // Modal öffnen & schließen
         function openModal(id) {
             const modal = document.getElementById(id);
             modal.classList.remove('hidden');
@@ -873,7 +930,6 @@
             document.body.style.overflow = 'auto'; 
         }
 
-        // Schließen durch Klick auf den Hintergrund (inkl. AGB-Modal)
         window.onclick = function(event) {
             const modals = ['impressum-modal', 'agb-modal', 'galerie-newborn-modal', 'galerie-paare-modal', 'galerie-familien-modal'];
             modals.forEach(id => {
@@ -884,16 +940,12 @@
             });
         }
 
-        /* Änderung 20261028: Veraltete scrollGallery-Funktion für alte Horizontal-Slider entfernt */
-
-        // NEUE AKTUALISIERTE SUBMIT-FUNKTION (Senden über Cloudflare Worker & Resend)
         async function submitForm(event) {
             event.preventDefault();
             const form = event.target;
             const submitBtn = form.querySelector('button[type="submit"]');
             const originalBtnText = submitBtn.innerText;
 
-            // Button während des Sendens sperren & Feedback geben
             submitBtn.disabled = true;
             submitBtn.innerText = 'Wird gesendet...';
 
