@@ -180,7 +180,8 @@
     <header class="fixed top-0 left-0 w-full bg-[#f4f2ef]/95 backdrop-blur-sm z-50 py-4 border-b border-gray-200 shadow-sm transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex justify-between items-center mb-2 md:mb-4">
-                <div class="w-12 md:w-1/3 flex justify-start"></div>
+                <!-- Ausgleichs-Platzhalter auf Mobilgeräten für exakte Logo-Zentrierung -->
+                <div class="w-10 md:w-1/3 flex justify-start"></div>
                 
                 <div class="flex-1 text-center flex justify-center px-2">
                     <a href="#home" class="hover:opacity-80 transition inline-block">
@@ -189,25 +190,22 @@
                     </a>
                 </div>
             
-                <!-- Rechts: Icons & Mobiler Hamburger-Button -->
-                <div class="w-auto md:w-1/3 flex justify-end items-center gap-3 md:gap-5 text-gray-600 text-base">
-                    <!-- Instagram -->
-                    <a href="https://www.instagram.com/einklick.fotografie/" target="_blank" rel="noopener noreferrer" class="hover:text-black transition" title="Instagram">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                    
-                    <!-- Google Maps / Business Profile -->
-                    <a href="https://maps.app.goo.gl/xTiE6bvwRCGWGrGa9" target="_blank" rel="noopener noreferrer" class="hover:text-black transition" title="Google Bewertungen & Standort">
-                        <i class="fa-brands fa-google"></i>
-                    </a>
-                    
-                    <!-- E-Mail -->
-                    <a href="#" onclick="openEmail(); return false;" class="hover:text-black transition" title="E-Mail schreiben">
-                        <i class="fa-regular fa-envelope"></i>
-                    </a>
+                <!-- Rechts: Icons für Desktop (md:flex) & Mobiler Button für Smartphones -->
+                <div class="w-10 md:w-1/3 flex justify-end items-center gap-4 md:gap-5 text-gray-600 text-base">
+                    <!-- Desktop Icons (Auf Handy ausgeblendet, damit das Logo exakt mittig bleibt) -->
+                    <div class="hidden md:flex items-center gap-5">
+                        <a href="https://www.instagram.com/einklick.fotografie/" target="_blank" rel="noopener noreferrer" class="hover:text-black transition" title="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://maps.app.goo.gl/xTiE6bvwRCGWGrGa9" target="_blank" rel="noopener noreferrer" class="hover:text-black transition" title="Google Bewertungen & Standort">
+                            <i class="fa-brands fa-google"></i>
+                        </a>
+                        <a href="#" onclick="openEmail(); return false;" class="hover:text-black transition" title="E-Mail schreiben">
+                            <i class="fa-regular fa-envelope"></i>
+                        </a>
+                    </div>
 
                     <!-- Prominenter Mobiler Hamburger-Button (Nur auf Mobilgeräten sichtbar) -->
-                    <div class="h-5 w-[1px] bg-gray-300 mx-1 md:hidden"></div>
                     <button onclick="toggleMobileMenu()" class="md:hidden flex items-center justify-center border border-[#c2b2a3] text-gray-800 px-3 py-1.5 rounded-sm hover:bg-[#c2b2a3] hover:text-white transition duration-300 focus:outline-none" aria-label="Menü öffnen">
                         <i class="fa-solid fa-bars text-lg"></i>
                     </button>
@@ -231,7 +229,9 @@
         <button onclick="toggleMobileMenu()" class="absolute top-6 right-6 text-gray-500 hover:text-black text-3xl focus:outline-none">
             &times;
         </button>
-        <nav class="flex flex-col gap-8 text-sm tracking-[0.2em] uppercase font-medium text-gray-800">
+        
+        <!-- Menü-Links untereinander -->
+        <nav class="flex flex-col gap-7 text-sm tracking-[0.2em] uppercase font-medium text-gray-800 mb-10">
             <a href="#uber-mich" onclick="toggleMobileMenu()" class="hover:text-[#c2b2a3] transition">Über mich</a>
             <a href="#galerien" onclick="toggleMobileMenu()" class="hover:text-[#c2b2a3] transition">Galerien</a>
             <a href="#leistungen" onclick="toggleMobileMenu()" class="hover:text-[#c2b2a3] transition">Leistungen</a>
@@ -239,6 +239,19 @@
             <a href="#preise" onclick="toggleMobileMenu()" class="hover:text-[#c2b2a3] transition">Preise</a>
             <a href="#kontakt" onclick="toggleMobileMenu()" class="hover:text-[#c2b2a3] transition">Kontakt</a>
         </nav>
+
+        <!-- Social Icons im mobilen Overlay (Unterhalb der Links) -->
+        <div class="pt-8 border-t border-gray-300/60 w-48 flex justify-center items-center gap-8 text-gray-700 text-xl">
+            <a href="https://www.instagram.com/einklick.fotografie/" target="_blank" rel="noopener noreferrer" class="hover:text-black transition" title="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://maps.app.goo.gl/xTiE6bvwRCGWGrGa9" target="_blank" rel="noopener noreferrer" class="hover:text-black transition" title="Google Bewertungen & Standort">
+                <i class="fa-brands fa-google"></i>
+            </a>
+            <a href="#" onclick="openEmail(); return false;" class="hover:text-black transition" title="E-Mail schreiben">
+                <i class="fa-regular fa-envelope"></i>
+            </a>
+        </div>
     </div>
 
     <main class="pt-[130px]">
