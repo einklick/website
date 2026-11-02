@@ -132,45 +132,65 @@
             scrollbar-width: none;
         }
 
-        /* Styles für das 2-Spalten Galerie-Grid (Square Double-Grid) in den Modals */
+        /* Container für das Modal-Grid */
         .modal-inner-grid {
             max-height: 75vh;
             overflow-y: auto;
             padding-right: 4px;
         }
 
+        /* Galerie-Grid:
+        - Mobil: 1 Spalte, natürliche Bildproportionen (volle Ansicht ohne Beschneidung)
+        - Desktop (ab 768px): 2 Spalten, quadratische Kacheln mit voll ausfüllendem Bild
+        */
         .gallery-grid-2col {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
+            grid-template-columns: 1fr;
+            gap: 16px;
         }
 
         .gallery-grid-item {
             position: relative;
             width: 100%;
-            padding-top: 100%; /* Erzeugt quadratische Kacheln */
-            overflow: hidden;
             border-radius: 4px;
             background-color: #e5e5e5;
         }
 
         .gallery-grid-item img {
-            position: absolute;
-            top: 0;
-            left: 0;
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: auto;
+            display: block;
+            border-radius: 4px;
             transition: transform 0.3s ease;
         }
 
         .gallery-grid-item:hover img {
-            transform: scale(1.03);
+            transform: scale(1.02);
         }
 
+        /* Ab Tablet / Desktop: Umschalten auf 2 Spalten mit quadratischem Raster */
         @media (min-width: 768px) {
             .gallery-grid-2col {
-                gap: 16px;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .gallery-grid-item {
+                padding-top: 100%; /* Erzeugt wieder das quadratische Seitenverhältnis */
+                overflow: hidden;
+            }
+
+            .gallery-grid-item img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* Füllt das Quadrat auf Desktop vollständig aus */
+            }
+
+            .gallery-grid-item:hover img {
+                transform: scale(1.03);
             }
         }
     </style>
